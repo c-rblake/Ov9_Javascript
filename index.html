@@ -1,0 +1,226 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Bish Bosh exercise on Jumbotron Template for Bootstrap </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> USED THE SCRIMBA BOOTSTRAP INSTEAD.-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="jumbotron.css" rel="stylesheet">-->
+  <!--<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>-->
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 id="jumbo-title" class="display-3">DEFAULT HEADING</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p>The Bish-Bosh application lists all number between 1 and 100 with some exceptions: If 3 is a valid divisor 'Bish' is displayed if 4 is a valid Divisor 'Bosh' is displayed instead. If a number have both 3 and 4 as valid denominators “​Bish-Bosh​” is printed. </p>
+          <p>Hello so this is how it works; remainder for 12 / 3 is: <span id="bish12">bish12</span> and is a : <span id="bish12type">default</span></p>
+
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Inactive Button »</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Custom Bish Bosh</h2>
+            <p> Enter custom Bish Bosh values and write them out the the bottom of the page. Max range is capped at 250. And max value for Bish or Bosh values of 10.</p>
+            <p> The code scales to any reasonable numbers but the output could be unmanageble for large ranges.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Another inactive button »</a></p>
+
+                        
+            <form id="bish-form">
+              <div class="form-group row">
+                <label class="col col-form-label" for="loop-value">Max value</label>
+                <div class="col">
+                    <input type="number" class="form-control" id="loop-value" min="50" max="250" value= 100>
+                </div>
+            </div>
+              <div class="form-group row">
+                  <label class="col col-form-label" for="bish-form-value">Bish value</label>
+                  <div class="col">
+                      <!-- <input type="text" class="form-control" id="bish-form-value">-->
+                      <input type="number" class="form-control" id="bish-form-value" min="1" max="10", value=3>
+                  </div>
+              </div>
+              <div class="form-group row">
+                <label class="col col-form-label" for="bosh-form-value">Bosh value</label>
+                <div class="col">
+                    <!-- <input type="password" class="form-control" id="bosh-form-value"> -->
+                    <input type="number" class="form-control" id="bosh-form-value" min="1" max="10", value=4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- <a href="#custom-bish-output"> solved with js.-->
+                  <p><button type="submit" id="custom-bish-btn" class="btn btn-primary">Run Bish Bosh</button></p>
+                </div>
+              </div>
+            </form>
+
+          </div>  
+
+          <!--mid column --> 
+
+          <div class="col-md-4">
+            <h2>Run Bish-Bosh in colsole (F12)</h2>
+            <p> Executes the default bish-bosh function with [100, 3, 4] in the console window. </p>
+            <p><button id="bish-bosh-btn" class="btn btn-secondary" role="button"></buttonid>Do BishBosh in Console »</button></p>
+
+            <h3>Handy button to clear the Console output</h3>
+            <div class="mt-3">
+            <p><button id="mid-button" class= "btn btn-warning" role="button"> Hello and Clear()</button></p>
+            </div>
+
+            <h3>Toggle Functionality</h3>
+            <p>JavaScript to toggle a window</p>
+            <button id="see-review" class="btn btn-secondary" role="button">SEE REVIEW »</button>
+            <div id="review" class="container d-none">
+              <h4>By Togg Lee</h4>
+              <p>"Toggles are very cool."</p>
+            </div>
+
+          </div>
+          <!--mid column ends here--> 
+
+          <div class="col-md-4">
+            <h2>Add / Remove items from a Shopping list</h2>
+            <div id="purchase-list" class="mt-3">
+              <div id="myDIV" class="header">
+                <h2 style="margin:5px">My Shopping List</h2>
+                <p>Warning: 30% of the time Banans are added instead</p>
+                <input type="text" id="myInput" placeholder="Item...">
+                <!--TODO CHANGE ONCLICK-->
+                <span onclick="newElement()" class="addBtn">Add</span>
+              </div>
+
+              <ul id="myUL">
+                <li>Onion Ice-Cream</li>
+                <li class="checked">Bananas</li>
+                <li>Vanilla Ice-Cream</li>
+                <li>Concrete Ice-Cream</li>
+                <li class="checked">Bish Bosh Candy</li>
+              </ul>
+
+            </div>
+
+
+
+          </div>
+
+        </div> <!--ROWS for center column ends here--> 
+        
+        <hr>
+        <div class="container" id="bishbosh-output-container">
+          <div class="row">
+            <!-- <div id="custom-bish-output" class="container d-none"> -->
+              <div id="custom-bish-output" class="column">
+                <h2 class ="justify-content-left">Bish Bosh output:</h2>
+                <div>
+                  <p id="custom-bish-target"></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button id="clear-bish-bosh-output" class="btn btn-warning" role="button">Clear Bishbosh Output »</button>
+            </div>
+          </div>
+        <hr>
+        </div>
+        
+
+
+      </div> <!-- /container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Git Retriver</h4>
+            <div class="row">
+            <button id="git-retriever" class="btn btn-info" role="button">Get Git Data »</button>
+            </div>
+            <div class="row">
+            <button id="git-clear" class="btn btn-warning" role="button">Clear Git Data »</button>
+            </div>
+          </div>
+          <div class="col" id="git-output">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="container mt-5">
+      <p>© Chris B 2021</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script> -->
+    <!-- Home Brewing code for JS -->
+    <script src="./utils.js"></script> <!-- ./ Utils had to come before home.JS to work. ODD. -->
+    <script src="./home.js"></script> <!-- ./ means where HTML is -->
+    
+    <!-- Dont forget ; at the end of JS -->
+    <!--<script>
+    alert('Hello World');   
+    </script>-->
+  
+
+</body></html>
